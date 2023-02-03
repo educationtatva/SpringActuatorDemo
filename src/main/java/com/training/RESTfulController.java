@@ -9,13 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/get")
-public class RESTController {
+public class RESTfulController {
 	
 	@Autowired
 	UserEntity entity;
 	
 	@GetMapping("/data")
 	public UserEntity getEntity() {
+		System.out.println("Request Received !!!!");
 		
 		return entity;
 	}
